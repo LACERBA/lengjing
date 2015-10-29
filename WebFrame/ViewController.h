@@ -1,0 +1,25 @@
+//
+//  ViewController.h
+//  WebFrame
+//
+//  Created by banggo on 3/6/15.
+//  Copyright (c) 2015 banggo. All rights reserved.
+//
+
+#import <UIKit/UIKit.h>
+#import "GesturePasswordController.h"
+
+#import <JavaScriptCore/JavaScriptCore.h>
+
+@protocol JavaScriptInterfaceExport <JSExport>
+-(void)shareWithjson:(NSString*)string;
+-(void)openWebWith:(NSString *)stringURL;
+@end
+
+@interface ViewController : UIViewController<UIWebViewDelegate,JavaScriptInterfaceExport>
+
+@property (weak, nonatomic) IBOutlet UIWebView *webFrameView;
+@property (strong, nonatomic) JSContext *context;
+
+@end
+
