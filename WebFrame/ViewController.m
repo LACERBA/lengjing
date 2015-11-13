@@ -33,12 +33,13 @@
 //    NSURLRequest *request =[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://baobeixiu.softbanana.com/"]];
     
 //      NSURLRequest *request =[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://169.254.29.251:3000/"]];
-    NSURLRequest *request =[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://www.lengjing.info/WebApp/html/index.html"]];
+//    NSURLRequest *request =[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://www.lengjing.info/WebApp/html/index.html"]];
 //      NSURLRequest *request =[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://169.254.29.251/test/"]];
 //      NSURLRequest *request =[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://open.koudaitong.com/oauth/authorize?client_id=2c436c071a453a55&response_type=code&state=mobilebbx&redirect_uri=http://api.softbanana.com/openApi/kdtback/1704/kdt"]];
-//    NSString *path = [[[NSBundle mainBundle] bundlePath]  stringByAppendingPathComponent:@"JSCallOC.html"];
-//    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL fileURLWithPath:path]];
+    NSString *path = [[[NSBundle mainBundle] bundlePath]  stringByAppendingPathComponent:@"JSCallOC.html"];
+    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL fileURLWithPath:path]];
 
+    
     self.webFrameView.scrollView.bounces = NO;
     [self.webFrameView loadRequest:request];
 
@@ -76,9 +77,6 @@
         
     }else if ([way isEqualToString:@"weibo"]){
         waytype = UMShareToSina;
-//        UMSocialData * socialdata =[UMSocialData defaultData];
-//        socialdata.extConfig.sinaData.url = url;
-//        socialdataservice.socialData = socialdata;
     }else if ([way isEqualToString:@"kongjian"]){
         waytype = UMShareToQzone;
         UMSocialData * socialdata =[UMSocialData defaultData];
@@ -142,12 +140,41 @@
     
     self.context = [webView valueForKeyPath:@"documentView.webView.mainFrame.javaScriptContext"];
     self.context[@"JavaScriptInterface"] = self;
-    
+    __block typeof(self) weakSelf = self;
+    self.context[@"showQRScanView"] =
+    ^{
+        [weakSelf showQRReader:nil];
+    };
 }
 - (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error{
     // load error, hide the activity indicator in the status bar
     [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
 }
+
+
+
+// 读二维码
+- (void)showQRReader:(id)sender {
+    // 扫描二维码
+    // 1. init ViewController
+    QRReaderViewController *VC = [[QRReaderViewController alloc] init];
+    
+    // 2. configure ViewController
+    VC.delegate = self;
+    
+    // 3. show ViewController
+//    [self.navigationController pushViewController:VC animated:YES];
+    [self presentViewController:VC animated:YES completion:^{
+        
+    }];
+}
+#pragma mark - QRReaderViewControllerDelegate
+
+- (void)didFinishedReadingQR:(NSString *)string {
+    NSLog(@"result string: %@", string);
+
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

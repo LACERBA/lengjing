@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "GesturePasswordController.h"
+#import "QRReaderViewController.h"
 
 #import <JavaScriptCore/JavaScriptCore.h>
 
@@ -16,7 +17,7 @@
 -(void)openWebWith:(NSString *)stringURL;
 @end
 
-@interface ViewController : UIViewController<UIWebViewDelegate,JavaScriptInterfaceExport>
+@interface ViewController : UIViewController<UIWebViewDelegate,JavaScriptInterfaceExport,QRReaderViewControllerDelegate>
 
 @property (weak, nonatomic) IBOutlet UIWebView *webFrameView;
 @property (strong, nonatomic) JSContext *context;
