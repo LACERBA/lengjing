@@ -59,6 +59,8 @@
 		6C4A62971AF92373001489BE /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C4A62961AF92373001489BE /* QuartzCore.framework */; };
 		6C4A62991AF92381001489BE /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C4A62981AF92381001489BE /* Security.framework */; };
 		6C4A629B1AF9239A001489BE /* libstdc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C4A629A1AF9239A001489BE /* libstdc++.dylib */; };
+		BBB46B371BF71DAF004D3362 /* DeviceNetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BBB46B351BF71DAF004D3362 /* DeviceNetViewController.m */; };
+		BBB46B381BF71DAF004D3362 /* DeviceNetViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BBB46B361BF71DAF004D3362 /* DeviceNetViewController.xib */; };
 		BBC611841AADE15C0002443A /* NSString+MD5Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = BBC611831AADE15C0002443A /* NSString+MD5Addition.m */; };
 		BBC611881AADE1670002443A /* NAmeview.m in Sources */ = {isa = PBXBuildFile; fileRef = BBC611871AADE1670002443A /* NAmeview.m */; };
 		BBC6118C1AADE1760002443A /* Tool.m in Sources */ = {isa = PBXBuildFile; fileRef = BBC6118B1AADE1760002443A /* Tool.m */; };
@@ -150,6 +152,9 @@
 		6C4A62961AF92373001489BE /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		6C4A62981AF92381001489BE /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		6C4A629A1AF9239A001489BE /* libstdc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.dylib"; path = "usr/lib/libstdc++.dylib"; sourceTree = SDKROOT; };
+		BBB46B341BF71DAF004D3362 /* DeviceNetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeviceNetViewController.h; sourceTree = "<group>"; };
+		BBB46B351BF71DAF004D3362 /* DeviceNetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeviceNetViewController.m; sourceTree = "<group>"; };
+		BBB46B361BF71DAF004D3362 /* DeviceNetViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DeviceNetViewController.xib; sourceTree = "<group>"; };
 		BBC611821AADE15C0002443A /* NSString+MD5Addition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MD5Addition.h"; sourceTree = "<group>"; };
 		BBC611831AADE15C0002443A /* NSString+MD5Addition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MD5Addition.m"; sourceTree = "<group>"; };
 		BBC611861AADE1670002443A /* NAmeview.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NAmeview.h; sourceTree = "<group>"; };
@@ -236,6 +241,9 @@
 				4A6626231AA953DD000D74DE /* Supporting Files */,
 				6C0139071B02FA9A00353350 /* JavaScriptInterface.h */,
 				6C0139081B02FA9A00353350 /* JavaScriptInterface.m */,
+				BBB46B341BF71DAF004D3362 /* DeviceNetViewController.h */,
+				BBB46B351BF71DAF004D3362 /* DeviceNetViewController.m */,
+				BBB46B361BF71DAF004D3362 /* DeviceNetViewController.xib */,
 			);
 			path = WebFrame;
 			sourceTree = "<group>";
@@ -497,7 +505,7 @@
 				TargetAttributes = {
 					4A66261F1AA953DD000D74DE = {
 						CreatedOnToolsVersion = 6.1;
-						DevelopmentTeam = 8NYH29Z82W;
+						DevelopmentTeam = 85L5D6E6ND;
 					};
 				};
 			};
@@ -529,6 +537,7 @@
 				6C41D1911BF5E65B003589A7 /* qr_bottom_right@2x.png in Resources */,
 				6C41D1901BF5E65B003589A7 /* qr_bottom_left@3x.png in Resources */,
 				4A66262F1AA953DD000D74DE /* Main.storyboard in Resources */,
+				BBB46B381BF71DAF004D3362 /* DeviceNetViewController.xib in Resources */,
 				BBC611921AADE1A70002443A /* dot-normal.png in Resources */,
 				6C41D1991BF5E65B003589A7 /* qr_vc_left@2x.png in Resources */,
 				6C4A62871AF92147001489BE /* UMSShareListController.xib in Resources */,
@@ -572,6 +581,7 @@
 				BBC611981AADE21E0002443A /* GesturePasswordController.m in Sources */,
 				BBC611881AADE1670002443A /* NAmeview.m in Sources */,
 				BBC611841AADE15C0002443A /* NSString+MD5Addition.m in Sources */,
+				BBB46B371BF71DAF004D3362 /* DeviceNetViewController.m in Sources */,
 				4A66262C1AA953DD000D74DE /* ViewController.m in Sources */,
 				4A6626291AA953DD000D74DE /* AppDelegate.m in Sources */,
 				6C41D19D1BF5E65B003589A7 /* QRReaderViewController.m in Sources */,
@@ -692,8 +702,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Hai Bo Zhang (EBU6UE933Z)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Hai Bo Zhang (EBU6UE933Z)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -714,7 +724,7 @@
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = com.lengjing.lengjing;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "075c0757-3132-4002-bfe5-7174a550c572";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -723,8 +733,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Hai Bo Zhang (EBU6UE933Z)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Hai Bo Zhang (EBU6UE933Z)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -745,7 +755,7 @@
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = com.lengjing.lengjing;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "075c0757-3132-4002-bfe5-7174a550c572";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

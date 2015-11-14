@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "UMSocial.h"
+#import "DeviceNetViewController.h"
 //#import "JavaScriptInterface.h"
 
 @interface ViewController ()
@@ -145,6 +146,10 @@
     ^{
         [weakSelf showQRReader:nil];
     };
+    
+    self.context[@"showNetWorkDevice"] = ^{
+        [weakSelf showDeviceConfigNet];
+    };
 }
 - (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error{
     // load error, hide the activity indicator in the status bar
@@ -152,7 +157,11 @@
 }
 
 
-
+-(void)showDeviceConfigNet{
+    DeviceNetViewController * devicevct = [[DeviceNetViewController alloc] initWithNibName:@"DeviceNetViewController" bundle:nil];
+    UINavigationController * navdevice = [[UINavigationController alloc] initWithRootViewController:devicevct];
+    [self presentViewController:navdevice animated:YES completion:nil];
+}
 // 读二维码
 - (void)showQRReader:(id)sender {
     // 扫描二维码
