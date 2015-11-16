@@ -39,8 +39,13 @@
 //    NSURLRequest *request =[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://www.lengjing.info/WebApp/html/index.html"]];
 //      NSURLRequest *request =[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://169.254.29.251/test/"]];
 //      NSURLRequest *request =[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://open.koudaitong.com/oauth/authorize?client_id=2c436c071a453a55&response_type=code&state=mobilebbx&redirect_uri=http://api.softbanana.com/openApi/kdtback/1704/kdt"]];
-    NSString *path = [[[NSBundle mainBundle] bundlePath]  stringByAppendingPathComponent:@"JSCallOC.html"];
-    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL fileURLWithPath:path]];
+    
+    NSURLRequest *request =[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://139.196.16.189:8080/remote_web/customize/purifier/m/app.html#/index"]];
+    
+    
+    
+//    NSString *path = [[[NSBundle mainBundle] bundlePath]  stringByAppendingPathComponent:@"JSCallOC.html"];
+//    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL fileURLWithPath:path]];
 
     
     self.webFrameView.scrollView.bounces = NO;
