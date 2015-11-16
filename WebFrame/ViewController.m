@@ -11,7 +11,9 @@
 #import "DeviceNetViewController.h"
 //#import "JavaScriptInterface.h"
 
-@interface ViewController ()
+@interface ViewController (){
+    JSValue *functionJS;
+}
 
 @end
 
@@ -150,6 +152,11 @@
     self.context[@"showNetWorkDevice"] = ^{
         [weakSelf showDeviceConfigNet];
     };
+    
+    
+    functionJS = [self.context objectForKeyedSubscript:@"showResult"];
+
+
 }
 - (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error{
     // load error, hide the activity indicator in the status bar
@@ -159,6 +166,10 @@
 
 -(void)showDeviceConfigNet{
     DeviceNetViewController * devicevct = [[DeviceNetViewController alloc] initWithNibName:@"DeviceNetViewController" bundle:nil];
+    devicevct.blockResult = ^(NSString * result){
+        [functionJS callWithArguments:@[result]];
+        
+    };
     UINavigationController * navdevice = [[UINavigationController alloc] initWithRootViewController:devicevct];
     [self presentViewController:navdevice animated:YES completion:nil];
 }
@@ -170,7 +181,7 @@
     
     // 2. configure ViewController
     VC.delegate = self;
-    
+
     // 3. show ViewController
 //    [self.navigationController pushViewController:VC animated:YES];
     [self presentViewController:VC animated:YES completion:^{

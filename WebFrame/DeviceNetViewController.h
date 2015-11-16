@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-
+typedef void(^BlockResult)(NSString * result);
 @interface DeviceNetViewController : UIViewController
 
+@property(nonatomic, strong)BlockResult blockResult;
 @end

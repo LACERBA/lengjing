@@ -34,6 +34,16 @@
     isconnecting = false;
     self.progress.progress = 0.0;
     self.switcher.on = false;
+    
+    
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"关闭" style:UIBarButtonItemStyleDone target:self action:@selector(closeView)];
+    
+}
+#pragma mark  关闭页面
+-(void)closeView{
+    [self dismissViewControllerAnimated:YES completion:^{
+        
+    }];
 }
 -(void)viewDidAppear:(BOOL)animated{
     [self showWifiSsid];
@@ -87,8 +97,14 @@
 
 -(void)showAlertWithMsg:(NSString *)msg
                   title:(NSString*)title{
-    UIAlertView * alert = [[UIAlertView alloc]initWithTitle:title message:msg delegate:nil cancelButtonTitle:@"cancel" otherButtonTitles:@"ok", nil];
-    [alert show];
+    
+    
+//    UIAlertView * alert = [[UIAlertView alloc]initWithTitle:title message:msg delegate:nil cancelButtonTitle:@"cancel" otherButtonTitles:@"ok", nil];
+//    [alert show];
+    [self dismissViewControllerAnimated:YES completion:^{
+        _blockResult(msg);
+    }];
+    
 }
 
 - (void)showWifiSsid

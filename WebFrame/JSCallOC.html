@@ -46,56 +46,60 @@
         
     }
 
+
+function showNetWorkDeviceInfo(info){
+    alert(info);
+}
     </script>
     
 </head>
 
 <body style="background:#CDE; color:#FFF">
     
-    <div>
-        <font size="3" color="black">输入一个整数：</font>
-        <textarea  id="input" style="font-size:10pt;color:black;"></textarea>
-    </div>
-    <br/>
-    
+<!--    <div>-->
+<!--        <font size="3" color="black">输入一个整数：</font>-->
+<!--        <textarea  id="input" style="font-size:10pt;color:black;"></textarea>-->
+<!--    </div>-->
+<!--    <br/>-->
+<!--    -->
     <div>
         <font size="3" color="black">结果： <b id="result"> </b> </font>
     </div>
     <br/>
-    
+
     <div id="div-a">
         <center>
             
             <br/>
-            <input type="button" value="计算阶乘" onclick="native.calculateForJS(input.value);" />
-            <br/>
-            <br/>
-            
-            
-            <input type="button" value="测试log" onclick="log('测试');" />
-            <br/>
-            <br/>
-            
-            <input type="button" value="oc原生Alert" onclick="alert('alert');" />
-            <br/>
-            <br/>
-            
-            <input type="button" value="addSubView" onclick="addSubView('view');" />
-            
-            
-            <input type="button" value="js" onclick="JavaScriptInterface.shareWithjson('hhh');" />
-            
-            <input type="button" value="share1" onclick="share1();" />
-            
-            <input type="button" value="showQRScanView" onclick="showQRScanView();" />
+<!--            <input type="button" value="计算阶乘" onclick="native.calculateForJS(input.value);" />-->
+<!--            <br/>-->
+<!--            <br/>-->
+<!--            -->
+<!--            -->
+<!--            <input type="button" value="测试log" onclick="log('测试');" />-->
+<!--            <br/>-->
+<!--            <br/>-->
+<!--            -->
+<!--            <input type="button" value="oc原生Alert" onclick="alert('alert');" />-->
+<!--            <br/>-->
+<!--            <br/>-->
+<!--            -->
+<!--            <input type="button" value="addSubView" onclick="addSubView('view');" />-->
+<!--            -->
+<!--            -->
+<!--            <input type="button" value="js" onclick="JavaScriptInterface.shareWithjson('hhh');" />-->
+<!--            -->
+<!--            <input type="button" value="share1" onclick="share1();" />-->
+
+            <input type="button" value="显示二维码" onclick="showQRScanView();" />
             <br/>
             <input type="button" value="显示配网页面" onclick="showNetWorkDevice();" />
             <br/>
             
-            <a id="push" href="#" onclick="native.pushViewControllerTitle('SecondViewController','secondPushedFromJS');">
-                push to second ViewController
-            </a>
-            
+<!--            <a id="push" href="#" onclick="native.pushViewControllerTitle('SecondViewController','secondPushedFromJS');">-->
+<!--                push to second ViewController-->
+<!--            </a>-->
+
             <br/>
             <br/>
             
