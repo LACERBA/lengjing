@@ -505,7 +505,7 @@
 				TargetAttributes = {
 					4A66261F1AA953DD000D74DE = {
 						CreatedOnToolsVersion = 6.1;
-						DevelopmentTeam = CQA7EA27HZ;
+						DevelopmentTeam = FSZTSJY2HZ;
 					};
 				};
 			};
@@ -722,7 +722,7 @@
 					"$(PROJECT_DIR)/WebFrame/SmartLink",
 				);
 				ONLY_ACTIVE_ARCH = NO;
-				PRODUCT_BUNDLE_IDENTIFIER = com.lengjing.lengjing;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jinghuaqi.jinghuaqi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -753,7 +753,7 @@
 					"$(PROJECT_DIR)/WebFrame/SmartLink",
 				);
 				ONLY_ACTIVE_ARCH = NO;
-				PRODUCT_BUNDLE_IDENTIFIER = com.lengjing.lengjing;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jinghuaqi.jinghuaqi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
