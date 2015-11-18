@@ -40,6 +40,12 @@
             document.getElementById("result").innerText = resultNumber;
         }
     
+    function showQRResult(resultNumber)
+    {
+        //alert(resultNumber);
+        document.getElementById("qrcoderesult").innerText = resultNumber;
+    }
+    
     function share1()
     {
         JavaScriptInterface.shareWithjson("{\"titlle\":\"K JSON\",\"image\":\"http://img.alicdn.com/tps/i3/TB16SgbHpXXXXc7XFXXx67lOXXX-156-156.png\",\"describe\":\"JSON在线校验,格式化JSON,json 在线校验\",\"way\":\"weixin\"}");
@@ -63,10 +69,13 @@ function showNetWorkDeviceInfo(info){
 <!--    <br/>-->
 <!--    -->
     <div>
-        <font size="3" color="black">结果： <b id="result"> </b> </font>
+        <font size="3" color="black">配网结果： <b id="result"> </b> </font>
     </div>
     <br/>
-
+    <div>
+        <font size="3" color="black">二维码结果： <b id="qrcoderesult"> </b> </font>
+    </div>
+    <br/>
     <div id="div-a">
         <center>
             

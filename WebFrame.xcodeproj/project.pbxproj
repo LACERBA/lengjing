@@ -38,14 +38,6 @@
 		6C4A62551AF91E17001489BE /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C4A62541AF91E17001489BE /* libsqlite3.0.dylib */; };
 		6C4A627E1AF92147001489BE /* UMSocialLocalizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6C4A62581AF92147001489BE /* UMSocialLocalizable.strings */; };
 		6C4A627F1AF92147001489BE /* libUMSocial_Sdk_4.2.2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C4A62661AF92147001489BE /* libUMSocial_Sdk_4.2.2.a */; };
-		6C4A62801AF92147001489BE /* UMSCommentDetailController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C4A62681AF92147001489BE /* UMSCommentDetailController.xib */; };
-		6C4A62811AF92147001489BE /* UMSCommentInputController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C4A62691AF92147001489BE /* UMSCommentInputController.xib */; };
-		6C4A62821AF92147001489BE /* UMSCommentInputControlleriPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C4A626A1AF92147001489BE /* UMSCommentInputControlleriPad.xib */; };
-		6C4A62831AF92147001489BE /* UMShareEditViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C4A626B1AF92147001489BE /* UMShareEditViewController.xib */; };
-		6C4A62841AF92147001489BE /* UMShareEditViewControlleriPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C4A626C1AF92147001489BE /* UMShareEditViewControlleriPad.xib */; };
-		6C4A62851AF92147001489BE /* UMSLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C4A626D1AF92147001489BE /* UMSLoginViewController.xib */; };
-		6C4A62861AF92147001489BE /* UMSnsAccountViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C4A626E1AF92147001489BE /* UMSnsAccountViewController.xib */; };
-		6C4A62871AF92147001489BE /* UMSShareListController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C4A626F1AF92147001489BE /* UMSShareListController.xib */; };
 		6C4A62881AF92147001489BE /* UMSocialSDKResourcesNew.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 6C4A62701AF92147001489BE /* UMSocialSDKResourcesNew.bundle */; };
 		6C4A62891AF92147001489BE /* libSocialQQ.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C4A62741AF92147001489BE /* libSocialQQ.a */; };
 		6C4A628A1AF92147001489BE /* TencentOpenAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C4A62751AF92147001489BE /* TencentOpenAPI.framework */; };
@@ -126,14 +118,6 @@
 		6C4A62641AF92147001489BE /* UMSocialSnsPlatformManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UMSocialSnsPlatformManager.h; sourceTree = "<group>"; };
 		6C4A62651AF92147001489BE /* UMSocialSnsService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UMSocialSnsService.h; sourceTree = "<group>"; };
 		6C4A62661AF92147001489BE /* libUMSocial_Sdk_4.2.2.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libUMSocial_Sdk_4.2.2.a; sourceTree = "<group>"; };
-		6C4A62681AF92147001489BE /* UMSCommentDetailController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UMSCommentDetailController.xib; sourceTree = "<group>"; };
-		6C4A62691AF92147001489BE /* UMSCommentInputController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UMSCommentInputController.xib; sourceTree = "<group>"; };
-		6C4A626A1AF92147001489BE /* UMSCommentInputControlleriPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UMSCommentInputControlleriPad.xib; sourceTree = "<group>"; };
-		6C4A626B1AF92147001489BE /* UMShareEditViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UMShareEditViewController.xib; sourceTree = "<group>"; };
-		6C4A626C1AF92147001489BE /* UMShareEditViewControlleriPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UMShareEditViewControlleriPad.xib; sourceTree = "<group>"; };
-		6C4A626D1AF92147001489BE /* UMSLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UMSLoginViewController.xib; sourceTree = "<group>"; };
-		6C4A626E1AF92147001489BE /* UMSnsAccountViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UMSnsAccountViewController.xib; sourceTree = "<group>"; };
-		6C4A626F1AF92147001489BE /* UMSShareListController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UMSShareListController.xib; sourceTree = "<group>"; };
 		6C4A62701AF92147001489BE /* UMSocialSDKResourcesNew.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = UMSocialSDKResourcesNew.bundle; sourceTree = "<group>"; };
 		6C4A62711AF92147001489BE /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/UMSocialLocalizable.strings"; sourceTree = "<group>"; };
 		6C4A62741AF92147001489BE /* libSocialQQ.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libSocialQQ.a; sourceTree = "<group>"; };
@@ -365,7 +349,6 @@
 				6C4A62581AF92147001489BE /* UMSocialLocalizable.strings */,
 				6C4A625A1AF92147001489BE /* Header */,
 				6C4A62661AF92147001489BE /* libUMSocial_Sdk_4.2.2.a */,
-				6C4A62671AF92147001489BE /* SocialSDKXib */,
 				6C4A62701AF92147001489BE /* UMSocialSDKResourcesNew.bundle */,
 			);
 			path = UMSocial_Sdk_4.2.2;
@@ -387,21 +370,6 @@
 				6C4A62651AF92147001489BE /* UMSocialSnsService.h */,
 			);
 			path = Header;
-			sourceTree = "<group>";
-		};
-		6C4A62671AF92147001489BE /* SocialSDKXib */ = {
-			isa = PBXGroup;
-			children = (
-				6C4A62681AF92147001489BE /* UMSCommentDetailController.xib */,
-				6C4A62691AF92147001489BE /* UMSCommentInputController.xib */,
-				6C4A626A1AF92147001489BE /* UMSCommentInputControlleriPad.xib */,
-				6C4A626B1AF92147001489BE /* UMShareEditViewController.xib */,
-				6C4A626C1AF92147001489BE /* UMShareEditViewControlleriPad.xib */,
-				6C4A626D1AF92147001489BE /* UMSLoginViewController.xib */,
-				6C4A626E1AF92147001489BE /* UMSnsAccountViewController.xib */,
-				6C4A626F1AF92147001489BE /* UMSShareListController.xib */,
-			);
-			path = SocialSDKXib;
 			sourceTree = "<group>";
 		};
 		6C4A62721AF92147001489BE /* UMSocial_Sdk_Extra_Frameworks */ = {
@@ -505,7 +473,7 @@
 				TargetAttributes = {
 					4A66261F1AA953DD000D74DE = {
 						CreatedOnToolsVersion = 6.1;
-						DevelopmentTeam = FSZTSJY2HZ;
+						DevelopmentTeam = 85L5D6E6ND;
 					};
 				};
 			};
@@ -533,19 +501,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6C4A62801AF92147001489BE /* UMSCommentDetailController.xib in Resources */,
 				6C41D1911BF5E65B003589A7 /* qr_bottom_right@2x.png in Resources */,
 				6C41D1901BF5E65B003589A7 /* qr_bottom_left@3x.png in Resources */,
 				4A66262F1AA953DD000D74DE /* Main.storyboard in Resources */,
 				BBB46B381BF71DAF004D3362 /* DeviceNetViewController.xib in Resources */,
 				BBC611921AADE1A70002443A /* dot-normal.png in Resources */,
 				6C41D1991BF5E65B003589A7 /* qr_vc_left@2x.png in Resources */,
-				6C4A62871AF92147001489BE /* UMSShareListController.xib in Resources */,
 				6C41D19B1BF5E65B003589A7 /* qr_vc_right@2x.png in Resources */,
 				6C41D1951BF5E65B003589A7 /* qr_top_left@2x.png in Resources */,
 				6C41D1931BF5E65B003589A7 /* qr_scan_line@2x.png in Resources */,
 				6C4A627E1AF92147001489BE /* UMSocialLocalizable.strings in Resources */,
-				6C4A62841AF92147001489BE /* UMShareEditViewControlleriPad.xib in Resources */,
 				6C41D1971BF5E65B003589A7 /* qr_top_right@2x.png in Resources */,
 				6C4A628B1AF92147001489BE /* TencentOpenApi_IOS_Bundle.bundle in Resources */,
 				6C41D1961BF5E65B003589A7 /* qr_top_left@3x.png in Resources */,
@@ -558,15 +523,10 @@
 				6C41D1981BF5E65B003589A7 /* qr_top_right@3x.png in Resources */,
 				6C41D18F1BF5E65B003589A7 /* qr_bottom_left@2x.png in Resources */,
 				BBC611931AADE1A70002443A /* dot-selected.png in Resources */,
-				6C4A62831AF92147001489BE /* UMShareEditViewController.xib in Resources */,
-				6C4A62861AF92147001489BE /* UMSnsAccountViewController.xib in Resources */,
-				6C4A62811AF92147001489BE /* UMSCommentInputController.xib in Resources */,
 				4A6626311AA953DD000D74DE /* Images.xcassets in Resources */,
-				6C4A62851AF92147001489BE /* UMSLoginViewController.xib in Resources */,
 				6C41D19C1BF5E65B003589A7 /* qr_vc_right@3x.png in Resources */,
 				6C4A62881AF92147001489BE /* UMSocialSDKResourcesNew.bundle in Resources */,
 				6C41D19A1BF5E65B003589A7 /* qr_vc_left@3x.png in Resources */,
-				6C4A62821AF92147001489BE /* UMSCommentInputControlleriPad.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
