@@ -46,16 +46,7 @@
         document.getElementById("qrcoderesult").innerText = resultNumber;
     }
     
-    function share1()
-    {
-        JavaScriptInterface.shareWithjson("{\"titlle\":\"K JSON\",\"image\":\"http://img.alicdn.com/tps/i3/TB16SgbHpXXXXc7XFXXx67lOXXX-156-156.png\",\"describe\":\"JSON在线校验,格式化JSON,json 在线校验\",\"way\":\"weixin\"}");
-        
-    }
 
-
-function showNetWorkDeviceInfo(info){
-    alert(info);
-}
     </script>
     
 </head>
@@ -80,34 +71,14 @@ function showNetWorkDeviceInfo(info){
         <center>
             
             <br/>
-<!--            <input type="button" value="计算阶乘" onclick="native.calculateForJS(input.value);" />-->
-<!--            <br/>-->
-<!--            <br/>-->
-<!--            -->
-<!--            -->
-<!--            <input type="button" value="测试log" onclick="log('测试');" />-->
-<!--            <br/>-->
-<!--            <br/>-->
-<!--            -->
-<!--            <input type="button" value="oc原生Alert" onclick="alert('alert');" />-->
-<!--            <br/>-->
-<!--            <br/>-->
-<!--            -->
-<!--            <input type="button" value="addSubView" onclick="addSubView('view');" />-->
-<!--            -->
-<!--            -->
-<!--            <input type="button" value="js" onclick="JavaScriptInterface.shareWithjson('hhh');" />-->
-<!--            -->
-<!--            <input type="button" value="share1" onclick="share1();" />-->
 
-            <input type="button" value="显示二维码" onclick="showQRScanView();" />
+
+            <input type="button" value="显示二维码" onclick="JavaScriptInterface.showQRScanView();" />
             <br/>
-            <input type="button" value="显示配网页面" onclick="showNetWorkDevice();" />
+            <input type="button" value="显示配网页面" onclick="JavaScriptInterface.showNetWorkDevice();" />
             <br/>
             
-<!--            <a id="push" href="#" onclick="native.pushViewControllerTitle('SecondViewController','secondPushedFromJS');">-->
-<!--                push to second ViewController-->
-<!--            </a>-->
+
 
             <br/>
             <br/>

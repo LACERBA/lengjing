@@ -15,4 +15,10 @@
 -(void)openWebWith:(NSString *)stringURL{
     NSLog(@"%@",stringURL);
 }
+-(void)showNetWorkDevice{
+    
+}
+-(void)showQRScanView{
+    
+}
 @end

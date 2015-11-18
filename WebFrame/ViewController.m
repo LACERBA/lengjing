@@ -143,23 +143,21 @@
     NSString * url = [dic objectForKey:@"url"];
     [self sharewith:title with:imageurl with:desc with:way withURL:url];
 }
+#pragma mark  设置配网设备
+-(void)showNetWorkDevice{
+    [self showDeviceConfigNet];
+}
+#pragma mark  扫描二维码
+-(void)showQRScanView{
+    [self showQRReader:nil];
+}
 - (void)webViewDidFinishLoad:(UIWebView *)webView{
     // finished loading, hide the activity indicator in the status bar
     [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
     
     self.context = [webView valueForKeyPath:@"documentView.webView.mainFrame.javaScriptContext"];
     self.context[@"JavaScriptInterface"] = self;
-    __block typeof(self) weakSelf = self;
-    self.context[@"showQRScanView"] =
-    ^{
-        [weakSelf showQRReader:nil];
-    };
-    
-    self.context[@"showNetWorkDevice"] = ^{
-        [weakSelf showDeviceConfigNet];
-    };
-    
-    
+
     //获取javascript 显示配网结果的方法
     functionJS = [self.context objectForKeyedSubscript:@"showResult"];
 

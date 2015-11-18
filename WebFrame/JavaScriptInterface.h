@@ -12,7 +12,8 @@
 @protocol JavaScriptInterfaceExport <JSExport>
 -(void)shareWithjson:(NSString*)string;
 -(void)openWebWith:(NSString *)stringURL;
-
+-(void)showNetWorkDevice;
+-(void)showQRScanView;
 @end
 @interface JavaScriptInterface : NSObject<JavaScriptInterfaceExport>
 
