@@ -41,12 +41,12 @@
 //      NSURLRequest *request =[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://169.254.29.251/test/"]];
 //      NSURLRequest *request =[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://open.koudaitong.com/oauth/authorize?client_id=2c436c071a453a55&response_type=code&state=mobilebbx&redirect_uri=http://api.softbanana.com/openApi/kdtback/1704/kdt"]];
     
-//    NSURLRequest *request =[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://139.196.16.189:8080/remote_web/customize/purifier/m/app.html#/index"]];
+    NSURLRequest *request =[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://139.196.16.189:8080/remote_web/customize/purifier/m/app.html#/index"]];
     
     
     
-    NSString *path = [[[NSBundle mainBundle] bundlePath]  stringByAppendingPathComponent:@"JSCallOC.html"];
-    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL fileURLWithPath:path]];
+//    NSString *path = [[[NSBundle mainBundle] bundlePath]  stringByAppendingPathComponent:@"JSCallOC.html"];
+//    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL fileURLWithPath:path]];
 
     
     self.webFrameView.scrollView.bounces = NO;
@@ -159,10 +159,10 @@
     self.context[@"JavaScriptInterface"] = self;
 
     //获取javascript 显示配网结果的方法
-    functionJS = [self.context objectForKeyedSubscript:@"showResult"];
+    functionJS = [self.context objectForKeyedSubscript:@"AppWIFIConfigCallBack"];
 
     //获取javascript 显示二维码扫描结果的方法
-    functionQR = [self.context objectForKeyedSubscript:@"showQRResult"];
+    functionQR = [self.context objectForKeyedSubscript:@"AppQrcodeCallBack"];
     
 }
 - (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error{
