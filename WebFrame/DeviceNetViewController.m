@@ -10,6 +10,7 @@
 #import "HFSmartLink.h"
 #import "HFSmartLinkDeviceInfo.h"
 #import <SystemConfiguration/CaptiveNetwork.h>
+#import "SVProgressHUD.h"
 
 @interface DeviceNetViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *ssid;
@@ -34,15 +35,15 @@
     isconnecting = false;
     self.progress.progress = 0.0;
     self.switcher.on = false;
-    
+    [SVProgressHUD setDefaultStyle:SVProgressHUDStyleDark];
     
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"关闭" style:UIBarButtonItemStyleDone target:self action:@selector(closeView)];
-    
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"添加" style:UIBarButtonItemStyleDone target:self action:@selector(connectPress:)];
 }
 #pragma mark  关闭页面
 -(void)closeView{
     [self dismissViewControllerAnimated:YES completion:^{
-        
+        [SVProgressHUD dismiss];
     }];
 }
 -(void)viewDidAppear:(BOOL)animated{
@@ -62,18 +63,22 @@
 - (IBAction)connectPress:(id)sender {
     NSString * pswdStr = self.pswd.text;
     self.progress.progress = 0.0;
+    [SVProgressHUD show];
     if(!isconnecting){
         [smtlk startWithKey:pswdStr processblock:^(NSInteger process) {
             self.progress.progress = process/18.0;
+            [SVProgressHUD showProgress:process/18.0];
         } successBlock:^(HFSmartLinkDeviceInfo *dev) {
 //            [self  showAlertWithMsg:[NSString stringWithFormat:@"%@:%@",dev.mac,dev.ip] title:@"OK"];
             [self showAlertWithMsg:[NSString stringWithFormat:@"{\"result\":true,\"mac\":\"%@\",\"ip\":\"%@\"}",dev.mac,dev.ip] title:nil];
         } failBlock:^(NSString *failmsg) {
 //            [self  showAlertWithMsg:failmsg title:@"error"];
             [self showAlertWithMsg:[NSString stringWithFormat:@"{\"result\":false}"] title:nil];
+            [SVProgressHUD showErrorWithStatus:failmsg];
         } endBlock:^(NSDictionary *deviceDic) {
             isconnecting  = false;
             [self.connectBtn setTitle:@"connect" forState:UIControlStateNormal];
+            [SVProgressHUD showErrorWithStatus:@"结束联网"];
         }];
         isconnecting = true;
         [self.connectBtn setTitle:@"connecting" forState:UIControlStateNormal];
