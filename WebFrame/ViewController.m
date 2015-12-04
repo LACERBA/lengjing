@@ -14,6 +14,7 @@
 @interface ViewController (){
     JSValue *functionJS;
     JSValue * functionQR;
+    JSValue * functionShare;
 }
 
 @end
@@ -110,9 +111,13 @@
                 
                 UIAlertView * alertView = [[UIAlertView alloc] initWithTitle:@"成功" message:@"分享成功" delegate:nil cancelButtonTitle:@"好" otherButtonTitles:nil];
                 [alertView show];
+                [functionShare callWithArguments:@[[NSString stringWithFormat:@"{\"result\":true}"]]];
+                
             } else if(response.responseCode != UMSResponseCodeCancel) {
                 UIAlertView * alertView = [[UIAlertView alloc] initWithTitle:@"失败" message:@"分享失败" delegate:nil cancelButtonTitle:@"好" otherButtonTitles:nil];
                 [alertView show];
+
+                [functionShare callWithArguments:@[[NSString stringWithFormat:@"{\"result\":false}"]]];
             }
         }];
         
@@ -164,6 +169,8 @@
     //获取javascript 显示二维码扫描结果的方法
     functionQR = [self.context objectForKeyedSubscript:@"AppQrcodeCallBack"];
     
+    //获取分享的结果方法
+    functionShare = [self.context objectForKeyedSubscript:@"AppShareCallBack"];
 }
 - (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error{
     // load error, hide the activity indicator in the status bar

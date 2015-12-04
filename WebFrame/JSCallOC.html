@@ -45,7 +45,9 @@
         //alert(resultNumber);
         document.getElementById("qrcoderesult").innerText = resultNumber;
     }
-    
+    function AppShareCallBack(result){
+        document.getElementById("shareresult").innerText = result;
+    }
 
     </script>
     
@@ -65,6 +67,10 @@
     <br/>
     <div>
         <font size="3" color="black">二维码结果： <b id="qrcoderesult"> </b> </font>
+    </div>
+    <br/>
+    <div>
+        <font size="3" color="black">分享结果： <b id="shareresult"> </b> </font>
     </div>
     <br/>
     <div id="div-a">
