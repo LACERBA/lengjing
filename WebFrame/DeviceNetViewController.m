@@ -67,7 +67,9 @@
     if(!isconnecting){
         [smtlk startWithKey:pswdStr processblock:^(NSInteger process) {
             self.progress.progress = process/18.0;
-            [SVProgressHUD showProgress:process/18.0];
+            
+//            [SVProgressHUD showProgress:process/18.0];
+            
         } successBlock:^(HFSmartLinkDeviceInfo *dev) {
 //            [self  showAlertWithMsg:[NSString stringWithFormat:@"%@:%@",dev.mac,dev.ip] title:@"OK"];
             [self showAlertWithMsg:[NSString stringWithFormat:@"{\"result\":true,\"mac\":\"%@\",\"ip\":\"%@\"}",dev.mac,dev.ip] title:nil];
@@ -79,7 +81,8 @@
         } endBlock:^(NSDictionary *deviceDic) {
             isconnecting  = false;
             [self.connectBtn setTitle:@"connect" forState:UIControlStateNormal];
-            [SVProgressHUD showErrorWithStatus:@"结束联网"];
+            [SVProgressHUD showSuccessWithStatus:@"结束配网"];
+            [SVProgressHUD dismiss];
         }];
         isconnecting = true;
         [self.connectBtn setTitle:@"connecting" forState:UIControlStateNormal];
@@ -88,6 +91,7 @@
             if(isOk){
                 isconnecting  = false;
                 [self.connectBtn setTitle:@"connect" forState:UIControlStateNormal];
+                
 //                [self showAlertWithMsg:stopMsg title:@"OK"];
             }else{
 //                [self showAlertWithMsg:stopMsg title:@"error"];
