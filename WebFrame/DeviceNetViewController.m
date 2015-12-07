@@ -71,6 +71,7 @@
         } successBlock:^(HFSmartLinkDeviceInfo *dev) {
 //            [self  showAlertWithMsg:[NSString stringWithFormat:@"%@:%@",dev.mac,dev.ip] title:@"OK"];
             [self showAlertWithMsg:[NSString stringWithFormat:@"{\"result\":true,\"mac\":\"%@\",\"ip\":\"%@\"}",dev.mac,dev.ip] title:nil];
+            [SVProgressHUD showSuccessWithStatus:@"配网成功"];
         } failBlock:^(NSString *failmsg) {
 //            [self  showAlertWithMsg:failmsg title:@"error"];
             [self showAlertWithMsg:[NSString stringWithFormat:@"{\"result\":false}"] title:nil];
